@@ -1,0 +1,192 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.part-hero {
+    background: linear-gradient(135deg, var(--sky-blue), var(--leaf-green));
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.part-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.part-image {
+    max-width: 100px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    opacity: 0.8;
+}
+
+.part-content {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.key-points, .flowchart {
+    flex: 1;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.key-points h2, .flowchart h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--forest-green);
+}
+
+.key-points ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.key-points ul li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.key-points ul li::before {
+    content: "•";
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: -0.2rem;
+}
+
+.flowchart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.flowchart-item {
+    background: var(--sky-blue);
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.flowchart-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.part-quiz {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    max-width: 800px;
+    margin: 4rem auto;
+}
+
+.part-quiz h2 {
+    color: var(--forest-green);
+    margin-bottom: 2rem;
+}
+
+#quiz-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#question-container {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.btn.correct {
+    background-color: #4CAF50;
+}
+
+.btn.wrong {
+    background-color: #F44336;
+}
+
+.start-btn, .next-btn {
+    font-size: 1.2rem;
+    padding: 0.8rem 2rem;
+}
+
+.hide {
+    display: none;
+}
+
+.feedback {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+#score-container {
+    text-align: center;
+}
+
+#score-container h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+
+    .flowchart {
+        margin-top: 2rem;
+    }
+
+    .btn-grid {
+        grid-template-columns: 1fr;
+    }
+}
